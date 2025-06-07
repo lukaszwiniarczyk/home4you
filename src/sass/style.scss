@@ -76,9 +76,8 @@ body{
             width: 100%;
             height: 83dvh;
             background-color: $black-light;
-            border-radius: 20px;
+            border-radius: 30px;
             outline: 1px solid #ecc79442;
-            // border: 1px solid #ecc79442;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -100,6 +99,40 @@ body{
                 color: $white;
                 font-weight: 700;
             }
+        }
+    }
+    .nav-desktop{
+        margin: 3rem 7rem;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        background-color: #1c1c1c3e;
+        border-radius: 44px;
+        border: 1px solid #ecc79442;
+        z-index: 1;
+        &__logo{
+            margin-left: 4rem;
+            text-decoration: none;
+            color: $white;
+            font-weight: 100;
+            font-size: 2.8rem;
+            span{
+                color: $gold-main;
+                font-weight: 400;
+                font-family: "Marcellus";
+            }
+        }
+        &__links{
+            margin-right: 2.5rem;
+            &--link{
+                padding: 1.5rem;
+                text-transform: uppercase;
+                color: $white;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.6rem;
+            } 
         }
     }
     &__box{
@@ -125,8 +158,144 @@ body{
             background-color: $gold-main;
             font-weight: 700;
             color: $black-main;
+            transition: background-color 0.3s;
+            &:hover{
+                background-color: $gold-light;
+            }
             i{
                 font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (min-width: 430px){
+    .header{
+        &__box{
+            &--heading{
+                font-size: 5rem;
+            }
+            &--cta{
+                margin-top: 18rem;
+            }
+        }
+    }
+}
+@media(min-width: 512px){
+    .header{
+        &__box{
+            padding: 0 3rem 6rem;
+        }
+    }
+}
+
+@media (min-width: 550px){
+    .header{
+        &__box{
+            &--heading{
+                font-size: 5.5rem;
+            }
+            &--cta{
+                margin-top: 17rem;
+            }
+        }
+    }
+}
+@media (min-width: 746px){
+    .header{
+        &__box{
+            &--heading{
+                font-size: 6rem;
+            }
+            &--cta{
+                margin-top: 18rem;
+            }
+        }
+    }
+}
+@media (min-width: 810px){
+    .header{
+        &__box{
+              padding: 0 3rem 6rem;
+        }
+    }
+}
+@media (min-width: 830px){
+    .header{
+        &__box{
+              padding: 0 7rem 6rem;
+        }
+    }
+}
+@media (min-width: 910px){
+    .header{
+        &__box{
+            &--heading{
+                font-size: 6.5rem;
+            }
+            &--cta{
+                margin-top: 20rem;
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    .header{
+        .nav{
+            display: none;
+        }
+        .nav-desktop{
+            display: flex;
+        }
+        &__box{
+            top: 25%;
+            &--heading{
+                font-size: 7.2rem;
+            }
+        }
+    }
+}
+@media (min-width: 1250px){
+    .header{
+        &__box{
+            top: 26%;
+            padding: 0 8rem 9rem;
+            &--heading{
+                font-size: 7.5rem;
+            }
+        }
+    }
+}
+@media (min-width: 1350px){
+    .header{
+        background-position: center;
+        background-size: cover;
+           border-radius: 0 0 40px 40px;
+        &__box{
+            justify-content: start;
+            align-items: start;
+            padding: 0rem;
+            text-align: start;
+            &--heading{
+                font-size: 8rem;
+            }
+            &--cta{
+                margin-top: 8rem;
+                padding: 2.3rem 4.5rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+@media (min-width: 1550px){
+    .header{
+        &__box{
+            top: 25%;
+            &--heading{
+                font-size: 8.5rem;
+            }
+            &--cta{
+                margin-top: 12rem;
             }
         }
     }
