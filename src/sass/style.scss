@@ -168,6 +168,74 @@ body{
         }
     }
 }
+.main{
+    .about-us{
+        padding: 15rem 2rem;
+        &__left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &--heading{
+                text-align: center;
+                font-size: 2.8rem;
+            }
+            &--img{
+                margin: 3rem 0 8rem;
+                width: 100%;
+                max-width: 350px;
+                height: 300px;
+                border-radius: 20px;
+                background-image: url('/dist/img/owner.jpg');;
+                background-size: cover;
+          
+            }
+        }
+        &__right{
+            &--img{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                img{
+                    border-radius: 20px;
+                    height: 80px;
+                    width: 48%;
+                }
+            }
+            &--info{
+                margin: 4rem 0;
+                color: $gray;
+                text-align: center;
+                line-height: 3.3rem;
+            }
+            &--achievements{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-box{
+                margin: 1rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                    &-number{
+                        margin: 1rem;
+                        font-family: "Marcellus", serif;
+                        font-size: 3.6rem;
+                        color: $gold-main;
+                    }
+                    &-text{
+                        color: $gray;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 430px){
     .header{
