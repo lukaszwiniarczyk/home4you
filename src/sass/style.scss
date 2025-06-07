@@ -170,7 +170,7 @@ body{
 }
 .main{
     .about-us{
-        padding: 15rem 2rem;
+        padding: 15rem 2.5rem;
         &__left{
             display: flex;
             justify-content: center;
@@ -178,7 +178,9 @@ body{
             flex-direction: column;
             &--heading{
                 text-align: center;
-                font-size: 2.8rem;
+                font-size: 3.5rem;
+                font-family: "Marcellus", serif;
+                font-weight: 400
             }
             &--img{
                 margin: 3rem 0 8rem;
@@ -186,7 +188,7 @@ body{
                 max-width: 350px;
                 height: 300px;
                 border-radius: 20px;
-                background-image: url('/dist/img/owner.jpg');;
+                background-image: url('../../dist/img/owner.jpg');;
                 background-size: cover;
           
             }
@@ -194,13 +196,14 @@ body{
         &__right{
             &--img{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: center;
                 width: 100%;
                 img{
                     border-radius: 20px;
                     height: 80px;
                     width: 48%;
+                    max-width: 155px;
                 }
             }
             &--info{
@@ -248,6 +251,16 @@ body{
             }
         }
     }
+    .main{
+        .about-us{
+            padding: 15rem 3rem;
+            &__left{
+                &--img{
+                    margin: 4rem 0 8rem;
+                }
+            }
+        }
+    }
 }
 @media(min-width: 512px){
     .header{
@@ -268,6 +281,39 @@ body{
             }
         }
     }
+    .main{
+        .about-us{
+            &__left{
+                &--heading{
+                    padding: 0 4rem;
+                    font-size: 4rem;
+                }
+            }
+            &__right{
+                &--img{
+                    justify-content: center;
+                    img{
+                        margin: 0 2rem;
+                    }
+                }
+                &--info{
+                    margin: 5rem 0;
+                }
+                &--achievements{
+                    flex-direction: row;
+                    &-box{
+                        text-align: center;
+                        &-number{
+                            margin: 1rem 0;
+                        }
+                        &-text{
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (min-width: 746px){
     .header{
@@ -277,6 +323,30 @@ body{
             }
             &--cta{
                 margin-top: 18rem;
+            }
+        }
+    }
+}
+@media(min-width: 776px){
+    .main{
+        .about-us{
+            padding: 15rem 4rem;            
+            &__left{
+                &--heading{
+                    padding: 0 6rem;
+                }
+            }
+            &__right{
+                &--info{
+                    padding: 0 6rem;
+                }
+                &--achievements{
+                    &-box{
+                        &-number{
+                        font-size: 4rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -307,6 +377,59 @@ body{
         }
     }
 }
+@media(min-width: 992px){
+    .main{
+        .about-us{
+            padding: 15rem 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__left{
+                margin-top: 7rem;
+                justify-content: start;
+                align-items: start;
+                width: 50%;
+                &--heading{
+                    padding: 0;
+                    text-align: left;
+                }
+                &--img{
+                    margin: 6rem 0rem 0rem;
+                    height: 350px;
+                }
+            }
+            &__right{
+                width: 50%;
+                &--img{
+                    align-items: start;
+                    justify-content: start;
+                    img{
+                        margin: 0 2rem 0 0;
+                        max-width: 250px;
+                        height: 140px;
+                    }
+                }
+                &--info{
+                    padding: 0;
+                    margin: 9rem 0;
+                    text-align: left;
+                }
+                &--achievements{
+                    justify-content: start;
+                    align-items: start;
+                    &-box{
+                        justify-content: start;
+                        align-items: start;
+                        &-text{
+                            text-align: left;
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1024px){
     .header{
         .nav{
@@ -322,6 +445,13 @@ body{
             }
         }
     }
+    .main{
+        .about-us{
+            &__left{
+                margin-right: 2rem;
+            }
+        }
+    }
 }
 @media (min-width: 1250px){
     .header{
@@ -332,6 +462,21 @@ body{
                 font-size: 7.5rem;
             }
         }
+    }
+    .main{
+        .about-us{
+            &__left{
+                margin-right: 0rem;
+                &--heading{
+                font-size: 4rem;
+                 }
+            }
+            &__right{
+                margin-left: 5rem;
+            }
+     }
+     
+
     }
 }
 @media (min-width: 1350px){
