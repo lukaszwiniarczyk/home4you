@@ -1,8 +1,11 @@
 const navBtn = document.querySelector('.nav__btn');
 const navMobile = document.querySelector('.nav__links');
-const navMobileLinks = document.querySelectorAll('.nav__links-link');
+const navMobileLinks = document.querySelectorAll('.nav__links--link');
 const body = document.querySelector('body');
 const html = document.querySelector('html');
+
+const carouselBox = document.querySelector('.offer__box')
+const btnCheck = document.querySelector('.offer__addons--btn')
 
 
 navBtn.addEventListener('click', () => {
