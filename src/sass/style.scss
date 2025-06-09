@@ -301,13 +301,13 @@ body {
 			align-items: center;
 			&--btn {
 				padding: 1.5rem 4rem;
-                background-color: $gold-main;
+				background-color: $gold-main;
 				border-radius: 34px;
 				color: $black-main;
-                border: none;
+				border: none;
 				font-weight: 700;
 				font-size: 2rem;
-                cursor: pointer;
+				cursor: pointer;
 				i {
 					font-weight: 700;
 				}
@@ -345,13 +345,13 @@ body {
 				text-align: center;
 			}
 			&--btn {
+				padding: 1.5rem 2rem;
 				margin: 3rem 0 7rem;
 				text-decoration: none;
 				background-color: $gold-main;
 				border-radius: 34px;
 				color: $black-main;
 				font-weight: 700;
-				padding: 1.5rem 2rem;
 			}
 		}
 		&__right {
@@ -416,6 +416,52 @@ body {
 			}
 		}
 	}
+	.career {
+			background-color: $gold-main;
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 8rem 2.5rem;
+			&--left {
+				&-heading {
+					font-size: 3.5rem;
+					text-align: center;
+					font-family: 'Marcellus', serif;
+					font-weight: 400;
+					color: $black-main;
+				}
+				img {
+					margin:4rem 0 7rem;
+					width: 100%;
+					border-radius: 20px;
+					height: 250px;
+					max-width: 420px;
+				}
+			}
+			&--right{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				&-info{
+					line-height: 3.3rem;
+					color: $black-main;
+					text-align: center;
+				}
+				&-link{
+					margin: 5rem 0;
+					padding: 1.5rem 3rem;
+					text-decoration: none;
+					background-color: $red;
+					font-weight: 700;
+					border-radius: 34px;
+					color: $white;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 430px) {
@@ -440,6 +486,11 @@ body {
 		}
 		.realizations {
 			padding: 15rem 3rem;
+		}
+		.career{
+			&__box{
+				padding: 8rem 3rem;
+			}
 		}
 	}
 }
@@ -506,6 +557,15 @@ body {
 				}
 			}
 		}
+		.career{
+			&__box{
+				&--left{
+					&-heading{
+						font-size: 4rem;
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 746px) {
@@ -542,14 +602,24 @@ body {
 				}
 			}
 		}
-        .realizations{
-            padding: 15rem 4rem;
-            &__left{
-                &--info{
-                    width: 80%;
-                }
-            }
-        }
+		.realizations {
+			padding: 15rem 4rem;
+			&__left {
+				&--info {
+					width: 80%;
+				}
+			}
+		}
+		.career{
+			&__box{
+				padding: 6rem 4rem;
+				&--right{
+					&-info{
+						width: 80%;
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 810px) {
@@ -722,58 +792,89 @@ body {
 				}
 			}
 		}
-        .realizations{
-            padding: 15rem 2rem 10rem 5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 95%;
-            border-radius: 0 75px 75px 0;
-            &__left{
-                display: flex;
-                justify-content: start;
-                align-items: start;
-                width: 50%;
-                &--heading{
-                    text-align: left;
-                    font-size: 4.8rem;
-                }
-                &--info{
-                    text-align: left;
-                }
-            }
-            &__right{
-                justify-content: start;
-                align-items: start;
-                flex-direction: row;
-                width: 50%;
-                &--two{
-                    width: 50%;
-                    justify-self: start;
-                    align-items: start;
-                    &-img{
-                        margin: 0;
-                        &-second{
-                            margin-top: 2rem;
-                        }
-                        p{
-                            width: 60%;
-                            height: 50px;
-                        }
-                    }
-                }
-                &--one{
-                    margin: 0 0 0 2rem;
-                    width: 50%;
-                    height: 680px;
-                    p{
-                        width: 60%;
-                        height: 50px;
-                    }
-;
-                }
-            }
-        }
+		.realizations {
+			padding: 15rem 2rem 10rem 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 95%;
+			border-radius: 0 75px 75px 0;
+			&__left {
+				display: flex;
+				justify-content: start;
+				align-items: start;
+				width: 50%;
+				&--heading {
+					text-align: left;
+					font-size: 4.8rem;
+				}
+				&--info {
+					text-align: left;
+				}
+			}
+			&__right {
+				justify-content: start;
+				align-items: start;
+				flex-direction: row;
+				width: 50%;
+				&--two {
+					width: 50%;
+					justify-self: start;
+					align-items: start;
+					&-img {
+						margin: 0;
+						&-second {
+							margin-top: 2rem;
+						}
+						p {
+							width: 60%;
+							height: 50px;
+						}
+					}
+				}
+				&--one {
+					margin: 0 0 0 2rem;
+					width: 50%;
+					height: 680px;
+					p {
+						width: 60%;
+						height: 50px;
+					}
+				}
+			}
+		}
+		.career{
+			margin-left: 5%;
+			margin-top: 16rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 95%;
+			border-radius: 75px 0 0 75px;
+			background-color: $gold-main;
+			&__box{
+				padding: 8rem 3rem ;
+				flex-direction: row;
+				&--left{
+					width: 50%;
+					&-heading{
+						margin-top: 3rem;
+						text-align: left;
+						font-size: 4.8rem;
+					}
+				}
+				&--right{
+					margin-top: 4rem;
+					justify-content: start;
+					align-items: start;
+					width: 50%;
+					&-info{
+						width: 100%;
+						text-align: left;
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 1350px) {
@@ -797,22 +898,22 @@ body {
 		}
 	}
 }
-@media(min-width: 1366px){
-    .main{
-        .realizations{
-              padding: 15rem 2rem 10rem 9rem;
-        }
-    }
+@media (min-width: 1366px) {
+	.main {
+		.realizations {
+			padding: 15rem 2rem 10rem 9rem;
+		}
+	}
 }
-@media(min-width: 1440px){
-    .main{
-        .realizations{
-              padding: 15rem 2rem 10rem 9rem;
-              &__left{
-                padding-left: 5rem;
-              }
-        }
-    }
+@media (min-width: 1440px) {
+	.main {
+		.realizations {
+			padding: 15rem 2rem 10rem 9rem;
+			&__left {
+				padding-left: 5rem;
+			}
+		}
+	}
 }
 @media (min-width: 1550px) {
 	.header {
@@ -826,65 +927,70 @@ body {
 			}
 		}
 	}
-     .main{
-        .realizations{
-              &__left{
-                padding-left: 8rem;
-              }
-        }
-    }
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 8rem;
+			}
+		}
+	}
 }
 @media (min-width: 1600px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 10rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 10rem;
+			}
+		}
+		.career{
+			&__box{
+				padding: 8rem 0rem;
+			}
+		}
+	}
 }
 @media (min-width: 1650px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 13rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 13rem;
+			}
+		}
+	}
 }
 @media (min-width: 1700px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 16rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 16rem;
+			}
+		}
+	}
 }
 @media (min-width: 1750px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 18rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 18rem;
+			}
+		}
+	}
 }
 @media (min-width: 1800px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 20rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 20rem;
+			}
+		}
+	}
 }
 @media (min-width: 1850px) {
-    .main{
-        .realizations{
-              &__left{
-                padding-left: 23rem;
-              }
-        }
-    } 
+	.main {
+		.realizations {
+			&__left {
+				padding-left: 23rem;
+			}
+		}
+	}
 }
