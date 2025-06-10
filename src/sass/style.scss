@@ -543,6 +543,21 @@ body {
 		}
 	}
 }
+.footer{
+	padding: 3rem ;
+	text-align: center;
+	a{	
+		font-size: 2.8rem;
+		color: $white;
+		text-decoration: none;
+		font-weight: 100;
+		span{
+			font-weight: 400;
+			color: $gold-main;
+			font-family: 'Marcellus', serif;
+		}
+	}
+}
 
 @media (min-width: 430px) {
 	.header {
