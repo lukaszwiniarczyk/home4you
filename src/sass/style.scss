@@ -97,6 +97,9 @@ body {
 				text-transform: uppercase;
 				color: $white;
 				font-weight: 700;
+				&:hover{
+					color: $gold-light;
+				}
 			}
 		}
 	}
@@ -131,6 +134,10 @@ body {
 				text-decoration: none;
 				font-weight: 700;
 				font-size: 1.6rem;
+				transition: color 0.3s;
+				&:hover{
+					color: $gold-light;
+				}
 			}
 		}
 	}
@@ -237,7 +244,7 @@ body {
 		}
 	}
 	.offer {
-		padding: 15rem 2.5rem;
+		padding: 5rem 2.5rem 15rem;
 		&__heading {
 			padding: 0 3rem;
 			text-align: center;
@@ -351,6 +358,10 @@ body {
 				border-radius: 34px;
 				color: $black-main;
 				font-weight: 700;
+				transition: background-color 0.3s;
+				&:hover{
+					background-color: $gold-light;
+				}
 			}
 		}
 		&__right {
@@ -457,6 +468,10 @@ body {
 					font-weight: 700;
 					border-radius: 34px;
 					color: $white;
+					transition: background-color 0.3s;
+					&:hover{
+						background-color: $black-light;
+					}
 				}
 			}
 		}
@@ -492,6 +507,10 @@ body {
 						color: $black-main;
 						font-size: 2rem;
 						cursor: pointer;
+						transition: background-color 0.3s;
+						&:hover{
+							background-color: $gold-light;
+						}
 					}
 				}
 				&-content{
