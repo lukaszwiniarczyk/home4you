@@ -6,6 +6,7 @@ const html = document.querySelector('html');
 
 const carouselBox = document.querySelector('.offer__box')
 const btnCheck = document.querySelector('.offer__addons--btn')
+const partNumber = document.querySelector('.offer__addons--part-type')
 
 
 navBtn.addEventListener('click', () => {
@@ -26,3 +27,12 @@ navMobileLinks.forEach((item) => {
 		html.style.overflow = 'visible';
 	});
 });
+
+btnCheck.addEventListener('click', ()=>{
+	carouselBox.classList.toggle('carouselMore')
+	if(carouselBox.classList.contains('carouselMore')){
+		partNumber.textContent ='2'
+	}else{
+		partNumber.textContent ='1'
+	}
+})

@@ -359,6 +359,9 @@ body {
 				color: $black-main;
 				font-weight: 700;
 				transition: background-color 0.3s;
+				i{
+					font-weight: 700;
+				}
 				&:hover{
 					background-color: $gold-light;
 				}
@@ -824,11 +827,16 @@ body {
 		.offer {
 			padding: 15rem 2rem;
 			overflow: hidden;
+			.carouselMore{
+					transform: translateX(-104%);
+			}
 			&__box {
 				margin-top: 25rem;
 				position: relative;
 				flex-direction: row;
 				justify-content: start;
+				transform: translateX(0%);
+				transition: transform 1.3s;
 				&--home {
 					max-width: none;
 					width: 49%;
