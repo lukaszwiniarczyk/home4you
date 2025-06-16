@@ -992,7 +992,7 @@ body {
 					}
 				}
 				&--one {
-					margin: 0 0 0 2rem;
+					margin: 0 0rem 0 2rem;
 					width: 50%;
 					height: 680px;
 					p {
@@ -1118,6 +1118,11 @@ body {
 		.realizations {
 			&__left {
 				padding-left: 13rem;
+			}
+			&__right{
+				&--one{
+					margin: 0 3.5rem 0 2rem;
+				}
 			}
 		}
 	}
