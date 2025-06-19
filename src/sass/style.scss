@@ -19,6 +19,7 @@ body {
 	color: $white;
 	font-size: 1.6rem;
 }
+
 .header {
 	display: flex;
 	justify-content: center;
@@ -30,6 +31,10 @@ body {
 	border-radius: 0 0 35px 35px;
 	z-index: 0;
 	overflow: hidden;
+	&-error {
+		background-image: none;
+		height: 88vh;
+	}
 	.nav {
 		position: relative;
 		margin: 3rem 0;
@@ -98,7 +103,7 @@ body {
 				text-transform: uppercase;
 				color: $white;
 				font-weight: 700;
-				&:hover{
+				&:hover {
 					color: $gold-light;
 				}
 			}
@@ -136,7 +141,7 @@ body {
 				font-weight: 700;
 				font-size: 1.6rem;
 				transition: color 0.3s;
-				&:hover{
+				&:hover {
 					color: $gold-light;
 				}
 			}
@@ -159,6 +164,48 @@ body {
 		}
 		&--cta {
 			margin-top: 20rem;
+			padding: 1.3rem 4rem;
+			border-radius: 40px;
+			text-decoration: none;
+			background-color: $gold-main;
+			font-weight: 700;
+			color: $black-main;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: $gold-light;
+			}
+			i {
+				font-weight: 700;
+			}
+		}
+	}
+	&__error {
+		position: absolute;
+		padding: 0 2rem 6rem;
+		top: 25%;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&--heading {
+			font-size: 8rem;
+			text-transform: uppercase;
+			font-family: 'Marcellus', serif;
+			font-weight: 400;
+		}
+		&--info {
+			margin: 3rem 0;
+			font-size: 2.6rem;
+			font-weight: 700;
+			&-lower {
+				padding: 0 3rem;
+				color: $gray;
+				font-size: 1.6rem;
+			}
+		}
+		&--btn {
+			margin-top: 9rem;
 			padding: 1.3rem 4rem;
 			border-radius: 40px;
 			text-decoration: none;
@@ -316,7 +363,7 @@ body {
 				font-size: 2rem;
 				cursor: pointer;
 				transition: background-color 0.3s;
-				&:hover{
+				&:hover {
 					background-color: $gold-light;
 				}
 				i {
@@ -364,10 +411,10 @@ body {
 				color: $black-main;
 				font-weight: 700;
 				transition: background-color 0.3s;
-				i{
+				i {
 					font-weight: 700;
 				}
-				&:hover{
+				&:hover {
 					background-color: $gold-light;
 				}
 			}
@@ -477,7 +524,7 @@ body {
 					border-radius: 34px;
 					color: $white;
 					transition: background-color 0.3s;
-					&:hover{
+					&:hover {
 						background-color: $black-light;
 					}
 				}
@@ -505,7 +552,7 @@ body {
 				width: 100%;
 				form {
 					width: 100%;
-					button{
+					button {
 						margin-top: 2rem;
 						padding: 1.5rem 5rem;
 						font-weight: 700;
@@ -516,17 +563,19 @@ body {
 						font-size: 2rem;
 						cursor: pointer;
 						transition: background-color 0.3s;
-						&:hover{
+						&:hover {
 							background-color: $gold-light;
 						}
 					}
 				}
-				&-content{
+				&-content {
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					flex-direction: column;
-					label, input, textarea{
+					label,
+					input,
+					textarea {
 						margin: 1rem 0;
 						font-family: inherit;
 						background: none;
@@ -536,32 +585,33 @@ body {
 						border-radius: 30px;
 						color: $gray;
 					}
-					input, textarea{
+					input,
+					textarea {
 						border: 1px solid #ecc79442;
 					}
-					input, textarea{
+					input,
+					textarea {
 						padding: 2rem;
 					}
-					textarea{
+					textarea {
 						resize: vertical;
 						min-height: 300px;
 					}
 				}
 			}
-			&--right{
-				
+			&--right {
 				margin-top: 6rem;
-				&-info{
+				&-info {
 					margin: 4rem 0;
 					display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-					&-heading{
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					&-heading {
 						font-size: 1.4rem;
 						color: $gray;
-					}	
-					&-text{
+					}
+					&-text {
 						font-size: 2.5rem;
 						color: $white;
 					}
@@ -570,15 +620,15 @@ body {
 		}
 	}
 }
-.footer{
-	padding: 3rem ;
+.footer {
+	padding: 3rem;
 	text-align: center;
-	a{	
+	a {
 		font-size: 2.4rem;
 		color: $white;
 		text-decoration: none;
 		font-weight: 100;
-		span{
+		span {
 			font-weight: 400;
 			color: $gold-main;
 			font-family: 'Marcellus', serif;
@@ -614,7 +664,7 @@ body {
 				padding: 8rem 3rem;
 			}
 		}
-		.contact{
+		.contact {
 			padding: 8rem 3rem;
 		}
 	}
@@ -691,8 +741,8 @@ body {
 				}
 			}
 		}
-		.contact{
-			&__heading{
+		.contact {
+			&__heading {
 				font-size: 4rem;
 			}
 		}
@@ -711,6 +761,16 @@ body {
 	}
 }
 @media (min-width: 776px) {
+	.header{
+		&__error{
+			&--heading{
+				font-size: 15rem;
+			}
+			&--info{
+				font-size: 4rem;
+			}
+		}
+	}
 	.main {
 		.about-us {
 			padding: 15rem 4rem;
@@ -832,8 +892,8 @@ body {
 		.offer {
 			padding: 15rem 2rem;
 			overflow: hidden;
-			.carouselMore{
-					transform: translateX(-104%);
+			.carouselMore {
+				transform: translateX(-104%);
 			}
 			&__box {
 				margin-top: 25rem;
@@ -866,24 +926,24 @@ body {
 				}
 			}
 		}
-		.contact{
+		.contact {
 			margin-top: 16rem;
 			border-radius: 75px 75px 0 0;
-			&__box{
+			&__box {
 				margin-top: 2rem;
 				justify-content: start;
 				align-items: start;
 				flex-direction: row;
-				&--left{
+				&--left {
 					width: 60%;
-					form{
+					form {
 						width: 100%;
 					}
 				}
-				&--right{
+				&--right {
 					margin: 0 0 0 7rem;
 					width: 40%;
-					&-info{
+					&-info {
 						justify-content: start;
 						align-items: start;
 					}
@@ -922,6 +982,23 @@ body {
 			padding: 0 8rem 9rem;
 			&--heading {
 				font-size: 7.5rem;
+			}
+		}
+		&__error{
+			top: 20%;
+			&--heading{
+				font-size: 20rem;
+			}
+			&--info{
+				font-size: 5.5rem;
+				&-lower{
+					font-size: 2rem;
+				}
+			}
+			&--btn{
+				padding: 2rem 5rem;
+				margin-top: 6rem;
+				font-size: 2rem;
 			}
 		}
 	}
@@ -1034,8 +1111,8 @@ body {
 				}
 			}
 		}
-		.contact{
-			&__heading{
+		.contact {
+			&__heading {
 				font-size: 4.8rem;
 			}
 		}
@@ -1119,8 +1196,8 @@ body {
 			&__left {
 				padding-left: 13rem;
 			}
-			&__right{
-				&--one{
+			&__right {
+				&--one {
 					margin: 0 3.5rem 0 2rem;
 				}
 			}
