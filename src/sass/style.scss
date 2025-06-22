@@ -761,12 +761,12 @@ body {
 	}
 }
 @media (min-width: 776px) {
-	.header{
-		&__error{
-			&--heading{
+	.header {
+		&__error {
+			&--heading {
 				font-size: 15rem;
 			}
-			&--info{
+			&--info {
 				font-size: 4rem;
 			}
 		}
@@ -984,18 +984,18 @@ body {
 				font-size: 7.5rem;
 			}
 		}
-		&__error{
+		&__error {
 			top: 20%;
-			&--heading{
+			&--heading {
 				font-size: 20rem;
 			}
-			&--info{
+			&--info {
 				font-size: 5.5rem;
-				&-lower{
+				&-lower {
 					font-size: 2rem;
 				}
 			}
-			&--btn{
+			&--btn {
 				padding: 2rem 5rem;
 				margin-top: 6rem;
 				font-size: 2rem;
@@ -1059,6 +1059,10 @@ body {
 					align-items: start;
 					&-img {
 						margin: 0;
+						transition: filter 0.5s;
+						&:hover {
+							filter: saturate(2);
+						}
 						&-second {
 							margin-top: 2rem;
 						}
@@ -1072,6 +1076,10 @@ body {
 					margin: 0 0rem 0 2rem;
 					width: 50%;
 					height: 680px;
+					transition: filter 0.5s;
+					&:hover {
+						filter: saturate(2);
+					}
 					p {
 						width: 60%;
 						height: 50px;
